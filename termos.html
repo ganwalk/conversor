@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso — ConversorAudio</title>
+  <meta name="description" content="Termos de uso do ConversorAudio.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">🎵 <span>Conversor<b>Audio</b></span></a>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <h1>Termos de Uso</h1>
+    <p>Última atualização: julho de 2026.</p>
+
+    <h2>1. O serviço</h2>
+    <p>O ConversorAudio é uma ferramenta gratuita de conversão de arquivos de áudio que funciona localmente, no navegador do usuário. O serviço é oferecido "como está", sem garantias de qualquer tipo.</p>
+
+    <h2>2. Uso responsável</h2>
+    <p>Você é o único responsável pelos arquivos que converte. Utilize a ferramenta apenas com conteúdo sobre o qual você possui os direitos necessários. É proibido usar o serviço para violar direitos autorais ou qualquer legislação aplicável.</p>
+
+    <h2>3. Limitação de responsabilidade</h2>
+    <p>Não nos responsabilizamos por perda de dados, arquivos corrompidos ou qualquer dano decorrente do uso da ferramenta. Recomendamos manter cópias dos arquivos originais.</p>
+
+    <h2>4. Software de terceiros</h2>
+    <p>A conversão é realizada pelo <a href="https://ffmpeg.org" rel="noopener noreferrer" target="_blank">FFmpeg</a>, executado no navegador via <a href="https://ffmpegwasm.netlify.app/" rel="noopener noreferrer" target="_blank">ffmpeg.wasm</a>, distribuídos sob suas respectivas licenças (LGPL/GPL e MIT).</p>
+
+    <h2>5. Alterações</h2>
+    <p>Estes termos podem ser atualizados a qualquer momento. O uso contínuo do site após alterações implica concordância com a versão vigente.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ConversorAudio</p>
+      <nav>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
