@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Áudio Grátis — MP3, WAV, FLAC, OGG, OPUS, M4A</title>
+  <meta name="description" content="Converta arquivos de áudio grátis e sem limites, direto no seu navegador. MP3, WAV, FLAC, OGG, OPUS, M4A e AIFF. Seus arquivos nunca saem do seu computador.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ============================================================
+       GOOGLE ADSENSE — passo 1
+       Quando sua conta AdSense for aprovada, cole aqui o script
+       principal que o Google fornece. Exemplo:
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SEU_ID_AQUI"
+          crossorigin="anonymous"></script>
+
+       ============================================================ -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">🎵 <span>Conversor<b>Audio</b></span></a>
+      <nav class="site-nav">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#faq">Perguntas frequentes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ANÚNCIO: banner do topo (leaderboard 728x90 / responsivo) -->
+  <div class="container">
+    <div class="ad-slot ad-top">
+      <!-- Cole aqui o bloco de anúncio do AdSense (formato display responsivo) -->
+      <span class="ad-placeholder">Espaço para anúncio</span>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Conversor de áudio grátis e ilimitado</h1>
+      <p class="hero-sub">
+        Converta <strong>MP3, WAV, FLAC, OGG, OPUS, M4A e AIFF</strong> em segundos.
+        A conversão acontece <strong>100% no seu navegador</strong> — seus arquivos
+        <strong>nunca são enviados para nenhum servidor</strong>.
+      </p>
+    </section>
+
+    <section class="converter" id="conversor">
+      <div class="dropzone" id="dropzone" tabindex="0" role="button"
+           aria-label="Clique ou arraste arquivos de áudio para cá">
+        <div class="dropzone-icon">📂</div>
+        <p class="dropzone-title">Arraste seus arquivos de áudio para cá</p>
+        <p class="dropzone-sub">ou <span class="link-like">clique para escolher</span> — vários arquivos de uma vez</p>
+        <input type="file" id="fileInput" accept="audio/*,video/*,.mp3,.wav,.flac,.ogg,.oga,.opus,.m4a,.aac,.aiff,.aif,.wma,.mp4,.mpeg,.mpga,.webm,.mkv,.amr,.3gp,.caf,.ac3" multiple hidden>
+      </div>
+
+      <div class="options" id="options" hidden>
+        <div class="option-group">
+          <label for="formatSelect">Converter para:</label>
+          <select id="formatSelect"></select>
+        </div>
+        <div class="option-group" id="qualityGroup">
+          <label for="qualitySelect">Qualidade:</label>
+          <select id="qualitySelect"></select>
+        </div>
+        <button class="btn btn-primary" id="convertBtn">Converter tudo</button>
+        <button class="btn btn-ghost" id="clearBtn">Limpar lista</button>
+      </div>
+
+      <p class="engine-status" id="engineStatus" hidden></p>
+
+      <ul class="file-list" id="fileList"></ul>
+
+      <div class="download-all-wrap" id="downloadAllWrap" hidden>
+        <button class="btn btn-success" id="downloadAllBtn">⬇ Baixar todos os convertidos</button>
+      </div>
+    </section>
+
+    <!-- ANÚNCIO: bloco entre o conversor e o conteúdo -->
+    <div class="ad-slot ad-middle">
+      <!-- Cole aqui o bloco de anúncio do AdSense (formato display responsivo) -->
+      <span class="ad-placeholder">Espaço para anúncio</span>
+    </div>
+
+    <section class="content-section" id="como-funciona">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><strong>Escolha os arquivos</strong> — arraste para a área acima ou clique para selecionar. Aceitamos os formatos de áudio mais comuns e até extraímos o áudio de vídeos (MP4, MPEG, WEBM…).</li>
+        <li><strong>Escolha o formato de saída</strong> — MP3, WAV, FLAC, OGG, OPUS, M4A ou AIFF, com controle de qualidade/bitrate.</li>
+        <li><strong>Converta e baixe</strong> — a conversão usa o FFmpeg rodando dentro do seu navegador via WebAssembly. Nada é enviado para a internet.</li>
+      </ol>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Perguntas frequentes</h2>
+      <details>
+        <summary>É grátis mesmo? Tem limite de conversões?</summary>
+        <p>Sim, é 100% grátis e sem limite de arquivos ou de tamanho. O site se mantém com anúncios. Como a conversão roda no seu próprio computador, não temos custo de servidor por conversão.</p>
+      </details>
+      <details>
+        <summary>Meus arquivos ficam salvos em algum servidor?</summary>
+        <p>Não. Os arquivos nunca saem do seu dispositivo: a conversão inteira acontece dentro do navegador, usando a tecnologia WebAssembly. Ao fechar a página, tudo é descartado.</p>
+      </details>
+      <details>
+        <summary>Qual a diferença entre os formatos?</summary>
+        <p><strong>MP3</strong> é o mais compatível; <strong>M4A/AAC</strong> tem melhor qualidade no mesmo bitrate; <strong>OGG</strong> e <strong>OPUS</strong> são formatos livres e muito eficientes (OPUS é ótimo para voz); <strong>FLAC</strong> comprime sem nenhuma perda de qualidade; <strong>WAV</strong> e <strong>AIFF</strong> são áudio sem compressão, usados em edição e produção musical.</p>
+      </details>
+      <details>
+        <summary>Por que a primeira conversão demora um pouco mais?</summary>
+        <p>Na primeira vez, o navegador baixa o motor de conversão (FFmpeg, ~32 MB). Depois disso ele fica em cache e as próximas conversões começam na hora.</p>
+      </details>
+      <details>
+        <summary>Funciona no celular?</summary>
+        <p>Sim! Funciona em qualquer navegador moderno (Chrome, Firefox, Edge, Safari), inclusive no celular. Arquivos muito grandes podem ser mais lentos em aparelhos com pouca memória.</p>
+      </details>
+    </section>
+  </main>
+
+  <!-- ANÚNCIO: bloco antes do rodapé -->
+  <div class="container">
+    <div class="ad-slot ad-bottom">
+      <!-- Cole aqui o bloco de anúncio do AdSense (formato display responsivo) -->
+      <span class="ad-placeholder">Espaço para anúncio</span>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ConversorAudio — conversão de áudio grátis no navegador.</p>
+      <nav>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="vendor/ffmpeg/ffmpeg.js"></script>
+  <script src="vendor/ffmpeg/util.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
